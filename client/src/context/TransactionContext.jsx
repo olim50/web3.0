@@ -13,23 +13,26 @@ const getEthereumContract = () => {
 	const signer = provider.getSigner();
 	const transactionContract = new ethers.Contract(contractAddress, contractABI, signer);
 
-	console.log({
-		provider,
-		signer,
-		transactionContract
-	});
-}
+	return transactionContract;
+
+	//console.log({
+	//	provider,
+	//	signer,
+	//	transactionContract
+	//});
+};
 
 export const TransactionProvider = ({ children }) => {
 	const [currentAccount, setCurrentAccount] = useState('');
 	const [formData, setFormData] = useState({ addressTo: '', amount: '', keyword: '', message: '' });
 	const [isLoading, setIsLoading] = useState(false);
 	const [transactionCount, setTransactionCount] = useState(
-		localStorage.getItem('transactionCount'));
+		localStorage.getItem('transactionCount'),
+	);
 
 	const handleChange = (e, name) => {
-		setFormData((prevState) => ({ ...prevState, [name]: e.target.value }));
-	}
+		setFormData(prevState => ({ ...prevState, [name]: e.target.value }));
+	};
 
 	const checkIfWalletIsConnected = async () => {
 		try {
@@ -40,15 +43,15 @@ export const TransactionProvider = ({ children }) => {
 			if (accounts.length) {
 				setCurrentAccount(accounts[0]);
 
-	// getAllTransactions();
+				// getAllTransactions();
 			} else {
-	console.log('Аккаунт криптовалюты не найден');
+				console.log('Аккаунт криптовалюты не найден');
 			}
 		} catch (error) {
-		console.log(error);
-		throw new Error('Нет данных по Эфириум');
+			console.log(error);
+			throw new Error('Нет данных по Эфириум');
 		}
-	}
+	};
 
 	const connectWallet = async () => {
 		try {
@@ -60,9 +63,9 @@ export const TransactionProvider = ({ children }) => {
 		} catch (error) {
 			console.log(error);
 
-		throw new Error('Нет данных по Эфириум');
+			throw new Error('Нет данных по Эфириум');
 		}
-	}
+	};
 
 	const sendTransaction = async () => {
 		try {
@@ -74,30 +77,36 @@ export const TransactionProvider = ({ children }) => {
 
 			await ethereum.request({
 				method: 'eth_sendTransaction',
-				params: [{
-		from: currentAccount,
-		to: addressTo,
-		gas: '0x5208', //21000 GWEI
-		value: parseAmount._hex, // 0.00001
-					}]
+				params: [
+					{
+						from: currentAccount,
+						to: addressTo,
+						gas: '0x5208', //21000 GWEI
+						value: parseAmount._hex, // 0.00001
+					},
+				],
 			});
 
 			const transactionHash = await transactionContract.addToBlockchain(
-				addressTo, parseAmount, message, keyword);
+				addressTo,
+				parseAmount,
+				message,
+				keyword,
+			);
 
 			setIsLoading(true);
-			console.log('Loading - ${transactionHash.hash}');
+			console.log(`Loading - ${transactionHash.hash}`);
 			await transactionHash.wait();
 			setIsLoading(false);
-			console.log('Success - ${transactionHash.hash}');
-			
+			console.log(`Success - ${transactionHash.hash}`);
+
 			const transactionCount = await transactionContract.getTransactionCount();
 
 			setTransactionCount(transactionCount.toNumber());
 		} catch (error) {
 			console.log(error);
 
-			throw new Error('Нет данных по крипте');
+			throw new Error('Нет данных по криптопереводам');
 		}
 	};
 
@@ -107,8 +116,15 @@ export const TransactionProvider = ({ children }) => {
 
 	return (
 		<TransactionContext.Provider
-			value={{ connectWallet, currentAccount, formData, setFormData, handleChange, sendTransaction }}>
+			value={{
+				connectWallet,
+				currentAccount,
+				formData,
+				setFormData,
+				handleChange,
+				sendTransaction,
+			}}>
 			{children}
 		</TransactionContext.Provider>
 	);
-}
+};
