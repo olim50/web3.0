@@ -6,17 +6,17 @@ Build and Deploy a Modern Web 3.0 Blockchain App | Solidity, Smart Contracts, Cr
 Used: vite@latest, web 3.0, tailwindcss3, landing for online transfering crypto currency, check transaction, transfer  Ethereum on real market, usefull links.
 
 Original source from @JavaScript Mastery, 12-28-21 
-
+#
 To create a new project, you need:
-# - create a new folder and give it a name;
-# - in this folder we create 2 more folders with the names: a) client and b) smart_contract;
-# - in the terminal we typing cd client. Here we initialize the react framework: npm init vite@latest ./ krypt react react. 
-# - npm install
-# - npm run dev.
+1 - create a new folder and give it a name;
+2 - in this folder we create 2 more folders with the names: a) client and b) smart_contract;
+3 - in the terminal we typing cd client. Here we initialize the react framework: npm init vite@latest ./ krypt react react. 
+4 - npm install
+5 - npm run dev.
 
 ***🔥 To run or continue in the code editor always type: npm run dev
 
-# - npm install -D tailwindcss postcss autoprefixer
+6 - npm install -D tailwindcss postcss autoprefixer
 7 - npx tailwindcss init -p (for creating tailwind.config.js)
 8 - in index.css we need to clear everything and enter:
 @tailwindbase;
