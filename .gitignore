@@ -11,6 +11,18 @@ node_modules
 dist
 dist-ssr
 *.local
+./package-lock.json
+.vscode
+
+./client/package-lock.json
+
+./smart_contract/package-lock.json
+
+./smart_contract/.gitignore
+
+./smart_contract/test
+
+./client/.gitignore
 
 # Editor directories and files
 .vscode/*
