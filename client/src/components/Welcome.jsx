@@ -101,7 +101,7 @@ const Welcome = () => {
 						/>
 
 						<Input
-							placeholder='Ключ (Gif)'
+							placeholder='Keyword (Gif)'
 							name='keyword'
 							type='text'
 							handleChange={handleChange}
