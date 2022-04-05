@@ -8,11 +8,11 @@ Used: vite@latest, web 3.0, tailwindcss3, landing for online transfering crypto 
 Original source from @JavaScript Mastery, 12-28-21 
 #
 To create a new project, you need:
-1 - create a new folder and give it a name;
-2 - in this folder we create 2 more folders with the names: a) client and b) smart_contract;
-3 - in the terminal we typing cd client. Here we initialize the react framework: npm init vite@latest ./ krypt react react. 
-4 - npm install
-5 - npm run dev.
+* 1 - create a new folder and give it a name;
+* 2 - in this folder we create 2 more folders with the names: a) client and b) smart_contract;
+* 3 - in the terminal we typing cd client. Here we initialize the react framework: npm init vite@latest ./ krypt react react. 
+* 4 - npm install
+* 5 - npm run dev.
 
 ***🔥 To run or continue in the code editor always type: npm run dev
 
@@ -66,7 +66,7 @@ npm install --save-dev hardhat @nomiclubs/hardhat-ethers ethers
 - function getTransactionCount() public view returns (uint256) {
    return transactionCount;
     }
-19 - register in Ropsten testnet faucet (https://faucet.egorfine.com) and have free ethereum (ETH)
+* 19 - register in Ropsten testnet faucet (https://faucet.egorfine.com) and have free ethereum (ETH)
 20 - in your Chrome browser add Metamask extension and register.
 21 - alchemy.com (for blockchain development connection) and create your App (name: krypt, description: Blockchain Smart Contract, ENVIRONMENT: development,ethereum, Ropsten).
 22 - copy HTTP key from Apps/view key and passed it in file hardht.config.js as a comment
