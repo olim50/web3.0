@@ -23,10 +23,10 @@ To create a new project, you need:
 @tailwind components;
 @tailwind utilities;
 9 - In the App.js file, we clear everything and enter: const App = () => {
-	return (
-		<div className='App'>
-			H1 className='text-3xl font-bold underline'>Hello world!</H1></div>)}
-      export default App
+return (
+<div className='App'>
+</div> )}
+export default App;
 10 - in terminal -> npm run dev -> ^C -> cd..-> cd->smart_contract 
 11 -> npm init -y (for initialize package.json)
 12 - back to client folder
