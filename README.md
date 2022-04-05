@@ -8,25 +8,21 @@ Used: vite@latest, web 3.0, tailwindcss3, landing for online transfering crypto 
 Original source from @JavaScript Mastery, 12-28-21 
 
 To create a new project, you need:
-1 - create a new folder and give it a name;
-2 - in this folder we create 2 more folders with the names: a) client and b) smart_contract;
-3 - in the terminal we typing cd client. Here we initialize the react framework: npm init vite@latest ./ krypt react react. 
-4 - npm install
-5 - npm run dev.
+# - create a new folder and give it a name;
+# - in this folder we create 2 more folders with the names: a) client and b) smart_contract;
+# - in the terminal we typing cd client. Here we initialize the react framework: npm init vite@latest ./ krypt react react. 
+# - npm install
+# - npm run dev.
 
 ***🔥 To run or continue in the code editor always type: npm run dev
 
-6 - npm install -D tailwindcss postcss autoprefixer
+# - npm install -D tailwindcss postcss autoprefixer
 7 - npx tailwindcss init -p (for creating tailwind.config.js)
 8 - in index.css we need to clear everything and enter:
 @tailwindbase;
 @tailwind components;
 @tailwind utilities;
-9 - In the App.js file, we clear everything and enter: const App = () => {
-return (
-<div className='App'>
-</div> )}
-export default App;
+9 - In the App.js file, we clear everything
 10 - in terminal -> npm run dev -> ^C -> cd..-> cd->smart_contract 
 11 -> npm init -y (for initialize package.json)
 12 - back to client folder
