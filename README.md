@@ -73,7 +73,7 @@ npm install --save-dev hardhat @nomiclubs/hardhat-ethers ethers
 * 23 - for deploy your contract (file deploy.js): npx hardhat run scripts-deploy.js --network ropsten (if compilation finished successfully in terminal you may see/copy Transaction number)
 * 24 - go to client/src and create new folder - utils with a new file - constants.js
 * 25 - add the copy number in code:
-    export const contractAddress = '0x112f0bb.........................';
+    export const contractAddress = '0x112f0bb ... ... ... ... .....';
 * 26 - plus many other innovations and good practices.
 
 
