@@ -2,6 +2,8 @@
 
 Build and Deploy a Modern Web 3.0 Blockchain App | Solidity, Smart Contracts, Crypto
 
+To run in the code editor, type: npm run dev
+
 vite@latest, web 3.0, tailwindcss3, landing for online transfering crypto currency, check transaction, transfer  Ethereum on real market, usefull links
 Original source from @JavaScript Mastery, 12-28-21 
 
