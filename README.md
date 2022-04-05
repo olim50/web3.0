@@ -54,16 +54,16 @@ npm install --save-dev hardhat @nomiclubs/hardhat-ethers ethers
    }
    -TransferStruct[] transactions;
 
-   -function addToBlockchain(address payable receiver, uint amount, string memory message, string memory keyword) public {
+- function addToBlockchain(address payable receiver, uint amount, string memory message, string memory keyword) public {
     transactionCount += 1;
     transactions.push(TransferStruct(msg.sender, receiver, amount, message, block.timestamp, keyword));
 
     emit Transfer(msg.sender, receiver, amount, message, block.timestamp, keyword);
     }
-  -function addToBlockchain() public view returns (TransferStruct[] memory) {
+- function addToBlockchain() public view returns (TransferStruct[] memory) {
    return transactions;
     }
-  -function getTransactionCount() public view returns (uint256) {
+- function getTransactionCount() public view returns (uint256) {
    return transactionCount;
     }
 19 - register in Ropsten testnet faucet (https://faucet.egorfine.com) and have free ethereum (ETH)
